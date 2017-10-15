@@ -1,0 +1,28 @@
+<h1>Listing propiedades</h1>
+ 
+<div class="col-sm-6 col-md-12">
+  <ul class="thumbnails">
+  <% @propiedades.each do |propiedad| %>
+    <li class="span4" style="float: left; list-style: none;">
+      <div class="row">
+        <div class="col-sm-3 col-md-3">
+          <div class="thumbnail" style="width: 400px; margin: 10px;">
+            <div class="caption">
+              <h3><%= propiedad.provincia %></h3>
+              <p><%= propiedad.descripcion %></p>
+              <div class="btn-group">
+                <button type="button" class="btn btn-default"><%= link_to 'Show', propiedade_path(propiedad) %></button>
+                <button type="button" class="btn btn-default"><%= link_to 'Edit', edit_propiedade_path(propiedad) %></button>
+                <button type="button" class="btn btn-default"><%= link_to 'Destroy', propiedade_path(propiedad), method: :delete, data: { confirm: 'Are you sure?' } %></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+  <% end %>
+  </ul>
+</div>
+
+
+<button type="button" class="btn btn-default"><%= link_to 'New Propiedad', new_propiedade_path %></button>

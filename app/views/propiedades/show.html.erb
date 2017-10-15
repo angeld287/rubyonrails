@@ -1,0 +1,37 @@
+<p>
+  <strong>descripcion:</strong>
+  <%= @propiedades.descripcion %>
+</p>
+ 
+<p>
+  <strong>direccion:</strong>
+  <%= @propiedades.direccion %>
+</p>
+
+<p>
+  <strong>ciudad:</strong>
+  <%= @propiedades.ciudad %>
+</p>
+
+<p>
+  <strong>provincia:</strong>
+  <%= @propiedades.provincia %>
+</p>
+
+<p>
+  <strong>pais:</strong>
+  <%= @propiedades.pais %>
+</p>
+
+<p>
+  <strong>valoracion:</strong>
+  <%= @propiedades.valoracion %>
+</p>
+
+<p>
+  <strong>dimensiones:</strong>
+  <%= @propiedades.dimensiones %>
+</p>
+
+<%= link_to 'Edit', edit_propiedade_path(@propiedades) %> |
+<%= link_to 'Back', propiedades_path %>

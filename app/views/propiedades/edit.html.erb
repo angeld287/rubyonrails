@@ -1,0 +1,59 @@
+<h1>Edit Propiedades</h1>
+ 
+<%= form_with model: @propiedades, local: true do |form| %>
+ 
+ <% if @propiedades.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@propiedades.errors.count, "error") %> prohibited
+        this article from being saved:
+      </h2>
+      <ul>
+        <% @propiedades.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= form.label :descripcion %><br>
+    <%= form.text_area :descripcion %>
+  </p>
+ 
+  <p>
+    <%= form.label :direccion %><br>
+    <%= form.text_field :direccion %>
+  </p>
+
+  <p>
+    <%= form.label :ciudad %><br>
+    <%= form.text_field :ciudad %>
+  </p>
+
+  <p>
+    <%= form.label :provincia %><br>
+    <%= form.text_field :provincia %>
+  </p>
+
+  <p>
+    <%= form.label :pais %><br>
+    <%= form.text_field :pais %>
+  </p>
+
+  <p>
+    <%= form.label :valoracion %><br>
+    <%= form.text_field :valoracion %>
+  </p>
+
+  <p>
+    <%= form.label :dimensiones %><br>
+    <%= form.text_field :dimensiones %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', propiedades_path %>
