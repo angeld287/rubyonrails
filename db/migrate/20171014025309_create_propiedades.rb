@@ -7,7 +7,7 @@ class CreatePropiedades < ActiveRecord::Migration[5.1]
       t.string :provincia
       t.string :pais
       t.integer :valoracion
-      t.integer :dimensiones
+      t.string :dimensiones
 
       t.timestamps
     end

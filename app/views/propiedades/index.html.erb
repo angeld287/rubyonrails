@@ -1,4 +1,4 @@
-<h1>Listing propiedades</h1>
+<h1>Lista de Propiedades</h1>
  
 <div class="col-sm-6 col-md-12">
   <ul class="thumbnails">
@@ -8,8 +8,10 @@
         <div class="col-sm-3 col-md-3">
           <div class="thumbnail" style="width: 400px; margin: 10px;">
             <div class="caption">
-              <h3><%= propiedad.provincia %></h3>
-              <p><%= propiedad.descripcion %></p>
+              <h3>Provincia: <%= propiedad.provincia %></h3>
+              <h6>Dimensiones: <%= propiedad.dimensiones %> Metros Cuadrados</h6>
+              <p>Descripcion: <%= propiedad.descripcion %></p>
+              <p>Valoracion: RD$ <%= propiedad.valoracion %></p>
               <div class="btn-group">
                 <button type="button" class="btn btn-default"><%= link_to 'Show', propiedade_path(propiedad) %></button>
                 <button type="button" class="btn btn-default"><%= link_to 'Edit', edit_propiedade_path(propiedad) %></button>
