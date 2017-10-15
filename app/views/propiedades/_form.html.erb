@@ -1,57 +1,52 @@
-<%= form_with model: @propiedades, local: true do |form| %>
+<div class="col-sm-6 col-md-6" style="margin:20%; margin-top: 5%;">
+  <%= form_for @propiedades do |form| %>
 
-   <% if @propiedades.errors.any? %>
-    <div id="error_explanation">
-      <h2>
-        <%= pluralize(@propiedades.errors.count, "error") %> prohibited
-        this article from being saved:
-      </h2>
-      <ul>
-        <% @propiedades.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
+    <% if @propiedades.errors.any? %>
+        <div id="error_explanation">  
+          <h2 style="color: red;">
+            <%= pluralize(@propiedades.errors.count, "error") %> prohibited
+            this article from being saved:
+          </h2>
+          <ul>
+            <% @propiedades.errors.full_messages.each do |msg| %>
+              <li style="color: red;"><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+    <div class="form-group">
+      <label for="exampleTextarea">Descripcion</label>
+      <%= form.text_area :descripcion, class: 'form-control' %>
     </div>
+    <div class="form-group">
+      <label for="exampleTextarea">Direccion</label>
+      <%= form.text_field :direccion, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Ciudad</label>
+      <%= form.text_field :ciudad, class: 'form-control', placeholder: "Digite la ciudad"%>
+      <small id="emailHelp" class="form-text text-muted"></small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Provincia</label>
+      <%= form.text_field :provincia, class: 'form-control', placeholder: "Digite la provincia" %>
+      <small id="emailHelp" class="form-text text-muted"></small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Pais</label>
+      <%= form.text_field :pais, class: 'form-control', placeholder: "Digite el pais" %>
+      <small id="emailHelp" class="form-text text-muted"></small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Valoracion</label>
+      <%= form.text_field :valoracion, class: 'form-control', placeholder: "Digite el valor en peso dominicano" %>
+      <small id="emailHelp" class="form-text text-muted"></small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Dimensiones</label>
+      <%= form.text_field :dimensiones, class: 'form-control', placeholder: "Digite las dimensiones en metros" %>
+      <small id="emailHelp" class="form-text text-muted"></small>
+    </div>
+    <%= form.submit%>
   <% end %>
-
-  <p>
-    <%= form.label :descripcion %><br>
-    <%= form.text_area :descripcion %>
-  </p>
- 
-  <p>
-    <%= form.label :direccion %><br>
-    <%= form.text_field :direccion %>
-  </p>
-
-  <p>
-    <%= form.label :ciudad %><br>
-    <%= form.text_field :ciudad %>
-  </p>
-
-  <p>
-    <%= form.label :provincia %><br>
-    <%= form.text_field :provincia %>
-  </p>
-
-  <p>
-    <%= form.label :pais %><br>
-    <%= form.text_field :pais %>
-  </p>
-
-  <p>
-    <%= form.label :valoracion %><br>
-    <%= form.text_field :valoracion %>
-  </p>
-
-  <p>
-    <%= form.label :dimensiones %><br>
-    <%= form.text_field :dimensiones %>
-  </p>
- 
-  <p>
-    <%= form.submit %>
-  </p>
-<% end %>
-
-<%= link_to 'Back', propiedades_path %>
+</div>

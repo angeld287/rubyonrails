@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
+  get 'propiedades/index'
 
   resources :propiedades
 
-  root 'welcome#index'
+  root 'propiedades#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
