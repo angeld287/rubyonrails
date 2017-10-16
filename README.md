@@ -6,6 +6,7 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
+![](https://github.com/angeld287/rubyonrails/blob/master/Ruby-img/1.PNG)
 
 * System dependencies
 
