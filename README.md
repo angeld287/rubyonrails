@@ -1,6 +1,6 @@
 # README
 
-Esto es un simple crud desarrollado con Ruby on Rails - Sqlite.
+Esto es un simple crud de propiedades desarrollado con Ruby on Rails - Sqlite.
 
 Pantalla principal: lista de propiedades
 ![](https://github.com/angeld287/rubyonrails/blob/master/Ruby-img/1.PNG)
