@@ -6,15 +6,15 @@ Instalacion
 
 En un ambiente de desarrollo con Ruby on Rails instalado (preferiblemente en Linux-Ubuntu), ejecutamos los siguientes comandos:
 
-1- git clone https://github.com/angeld287/rubyonrails
+    git clone https://github.com/angeld287/rubyonrails
 
-2- cd rubyonrails/
+    cd rubyonrails/
 
-3- bundle install
+    bundle install
 
-4- bin/rails db:migrate
+    bin/rails db:migrate
 
-5- bin/rails s
+    bin/rails s
 
 Vistas de la aplicacion:
 
